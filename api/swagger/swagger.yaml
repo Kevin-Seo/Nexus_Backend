@@ -44,6 +44,14 @@ paths:
             $ref: "#/definitions/ErrorResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
+# Use API Keys
+securityDefinitions:
+  api_key:
+    type: apiKey
+    in: query
+    name: api_key
+security:
+  - api_key: []
 # complex objects have schema definitions
 definitions:
   HelloWorldResponse:
