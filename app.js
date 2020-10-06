@@ -25,10 +25,10 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   // Dynamic swagger host
   swaggerExpress.runner.swagger.host = '127.0.0.1:10010';
 
-  // add swagger-ui (/docs)
+  // Add swagger-ui (/docs)
   app.use(SwaggerUi(swaggerExpress.runner.swagger))
 
-  // install middleware
+  // Install middleware
   swaggerExpress.register(app);
 
   var port = process.env.PORT || 10010;
